@@ -6,15 +6,15 @@ address: "3909 Halls Ferry Rd., Vicskburg, MS 39180"      # full street address 
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "32.2997118,-90.8665134"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "Oct 1-4, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "Oct 8-10, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 12:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2018-10-1      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2018-10-4        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+startdate: 2018-10-8      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2018-10-10        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Chris Kees", "Drew Loney"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Alistair Bentley", "Kim Pevey", "Chase Hamilton"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["christopher.e.kees@usace.army.mil"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite: 50609198475          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite: 50927895707          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -45,11 +45,6 @@ eventbrite: 50609198475          # optional: alphanumeric key for Eventbrite reg
   scrolling="auto">
 </iframe>
 {% endif %}
-
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -120,9 +115,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.). If you will be using an ACE-IT laptop, please got to the <a href="https://app-portal.usace.army.mil/ESD"> App Portal </a> and install Git, Python 3.6.4 (Python Software Foundation), and PyCharm. If you have administrative access on an RDE laptop, you  should ensure that your machine has the packages listed below <a href="#setup">below</a>). In either case, please ensure that you have Bash Shell, Git, Python 3, and a text editor available prior to the start of the workshop and seek help from the appropriate RDE or ACE-IT support staff. Participants are also required to abide by
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -473,7 +466,8 @@ and our administrator may contact you if we need any extra information.</h4>
       </p>
       <p>
         Others editors that you can use are
-        <a href="https://notepad-plus-plus.org/">Notepad++</a> or
+        <a href="https://www.gnu.org/software/emacs/"> Emacs</a>,
+        <a href="https://notepad-plus-plus.org/">Notepad++</a>, or
         <a href="https://www.sublimetext.com/">Sublime Text</a>.
         <strong>Be aware that you must
           add its installation directory to your system path.</strong>
@@ -490,7 +484,9 @@ and our administrator may contact you if we need any extra information.</h4>
       </p>
       <p>
         Others editors that you can use are
-        <a href="https://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+        <a href="https://www.gnu.org/software/emacs/"> Emacs</a>,
+
+        <a href="https://www.barebones.com/products/textwrangler/">Text Wrangler</a>, or
         <a href="https://www.sublimetext.com/">Sublime Text</a>.
       </p>
     </div>
@@ -502,6 +498,7 @@ and our administrator may contact you if we need any extra information.</h4>
       </p>
       <p>
         Others editors that you can use are
+        <a href="https://www.gnu.org/software/emacs/"> Emacs</a>,
         <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
         <a href="https://kate-editor.org/">Kate</a> or
         <a href="https://www.sublimetext.com/">Sublime Text</a>.
@@ -516,14 +513,14 @@ and our administrator may contact you if we need any extra information.</h4>
            Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
   <h3>Python</h3>
 
-  <p>
-    <a href="https://python.org">Python</a> is a popular language for
-    research computing, and great for general-purpose programming as
-    well.  Installing all of its research packages individually can be
-    a bit difficult, so we recommend
-    <a href="https://www.anaconda.com/distribution/">Anaconda</a>,
-    an all-in-one installer.
-  </p>
+  <p> <a href="https://python.org">Python</a> is a popular language
+    for research computing, and great for general-purpose programming
+    as well.  You can install the latest official version from <a
+    href="https://python.org">Python</a>. Installing all of its
+    research packages individually can be a bit difficult, so we
+    recommend <a
+    href="https://www.anaconda.com/distribution/">Anaconda</a>, an
+    all-in-one installer.  </p>
 
     <p>
       Regardless of how you choose to install it,
@@ -602,173 +599,3 @@ and our administrator may contact you if we need any extra information.</h4>
   </p>
 {% endcomment %}
 </div> {% comment %} End of 'Python' section. {% endcomment %}
-
-<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
-  <h3>R</h3>
-
-  <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
-      <p>
-        You can download the binary files for your distribution
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      </p>
-    </div>
-  </div>
-</div> {% comment %} End of 'R' section. {% endcomment %}
-
-<div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="https://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_installer}}">
-          {% if page.carpentry == "swc" %}
-          Software Carpentry
-          {% elsif page.carpentry == "dc" %}
-          Data Carpentry
-          {% elsif page.carpentry == "lc" %}
-          Library Carpentry
-          {% endif %}
-          Windows Installer
-	</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">macOS</h4>
-      <p>
-        SQLite comes pre-installed on macOS.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
-</div> {% comment %} End of 'SQLite' section. {% endcomment %}
-
-<div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
-  <h3>OpenRefine</h3>
-  <p>
-    For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
-    It runs inside a web browser, but no web connection is needed.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="openrefine-windows">Windows</h4>
-      <p>
-        Check that you have either the Firefox or the Chrome browser installed and set as your default browser.
-        <strong>OpenRefine runs in your default browser.</strong>
-        It will not run correctly in Internet Explorer.
-      </p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a></p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by clicking <code>google-refine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="openrefine-mac">Mac</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong> It may not run correctly in Safari.</p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by double-clicking it.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by dragging the icon into the Applications folder.</p>
-      <p>Use <code>Ctrl-click/Open ... </code> to launch it.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="openrefine-linux">Linux</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong></p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Make a directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-  </div>
-</div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
-
-{% comment %}
-<div id="vm">
-  <h3>Virtual Machine</h3>
-
-  <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
-  </p>
-  <ol>
-    <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
-    </li>
-    <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
-    </li>
-  </ol>
-</div>
-{% endcomment %}
